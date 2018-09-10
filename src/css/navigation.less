@@ -1,0 +1,77 @@
+nav.steps {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: calc(~"100% - 20px");
+  z-index: 999;
+  .display-flex();
+  
+  @media @mobile {
+    left: 2px;
+    width: calc(~"100% - 4px");
+    top: 4px;
+  }
+
+  button {
+    background: @df-middle-gray;
+    .flex(1);
+    height: 10px;
+    margin: 1px;
+    border-radius: 0px;
+    border: none;
+    position: relative;
+    padding: 0;
+    
+    @media @mobile {
+      margin-left: 0;
+      border-radius: 0;
+    }
+
+    &.current {
+      background: lighten(@df-middle-gray, 20%);
+    }
+
+    &:hover, &:focus {
+      background: lighten(@df-middle-gray, 10%);
+    }
+
+    &.current .highlight {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      background: white;
+      height: 100%;
+      transition: all .1s linear;
+      border-radius: inherit;
+    }
+
+    label {
+      position: absolute;
+      top: 100%;
+      padding-top: 6px;
+      color: white;
+      left: 0;
+      width: 300%;
+      font-weight: bold;
+      font-size: 12px;
+      text-align: left;
+      text-transform: uppercase;
+      @outline: lightgray;
+      @blur: 0px;
+      /*text-shadow: 
+        1px 0px @blur @outline,
+        1px 1px @blur @outline,
+        -1px 0px @blur @outline,
+        -1px -1px @blur @outline,
+        0px -1px @blur @outline,
+        1px 1px @blur @outline,
+        0px 1px @blur @outline,
+        -1px 1px @blur @outline;*/
+
+      @media @mobile {
+        display: none;
+      }
+    }
+  }
+}

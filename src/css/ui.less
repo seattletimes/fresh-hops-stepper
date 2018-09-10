@@ -1,0 +1,111 @@
+.spinner {
+  @keyframes spinner {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(359deg); }
+  }
+
+  color: white;
+  font-size: 100px;
+  transform-origin: 50% 50%;
+  animation: spinner 1s infinite;
+  line-height: 1;
+  display: none;
+
+}
+
+&.loading .spinner {
+  display: block;
+}
+
+
+.play-pause {
+  position: absolute;
+  bottom: 12px;
+  right: 50px;
+  z-index: 9999;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  pointer-events: auto;
+  border-radius: 8px;
+  font-family: @df-sans;
+  cursor: pointer;
+  display: block;
+
+  &:hover, &:focus {
+    color: @df-blue;
+  }
+
+
+
+  @media @mobile {
+    bottom: auto;
+    top: 15px;
+    right: 40px;
+  }
+
+  input {
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    overflow: hidden;
+  }
+
+  svg {
+    fill: currentColor;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+  }
+
+  input:checked + label {
+    color: @df-blue;
+  }
+}
+
+&.paused .play-pause {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  color: @df-middle-gray;
+  line-height: 1;
+
+  @media @mobile {
+    bottom: auto;
+    top: 10px;
+    right: 0px;
+  }
+
+
+  input {
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    position: absolute;
+    overflow: hidden;
+  }
+
+  svg {
+    fill: currentColor;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: block;
+  }
+
+  input:checked + label {
+    color: @df-blue;
+  }
+}
+
+
+
+
+

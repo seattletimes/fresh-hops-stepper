@@ -1,0 +1,82 @@
+@import "seattletimes";
+
+@import "navigation";
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+main.app {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .prev {
+  position: absolute;
+  width:20%;
+  height:80%;
+  bottom:10%;
+  left:0;
+  border:none;
+  background:none;
+}
+
+.next {
+  position: absolute;
+  width:20%;
+  height:80%;
+  bottom:10%;
+  right:0;
+  border:none;
+  background:none;
+}
+
+.prev:focus, .next:focus{outline:none;}
+
+  video {
+    max-width: none;
+    height: 100%;
+    background: @df-dark-gray;
+    z-index: -1;
+    background: transparent;
+    opacity: 0;
+
+    // short
+    @media (min-aspect-ratio: 16 / 9) {
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-aspect-ratio: 16 / 9) {
+      height: 100%;
+      width: auto;
+    }
+
+    @media @mobile {
+      min-height: 100vh;
+      min-width: 100vw;
+      height: auto;
+      width: auto;
+    }
+
+    &.front {
+      z-index: 0;
+      opacity: 1;
+    }
+  }
+
+  @import "intro";
+  @import "outro";
+  @import "overlays";
+  @import "ui";
+}

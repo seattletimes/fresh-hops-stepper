@@ -1,0 +1,20 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "magical-exactly"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2018/fresh-hops-brewing"
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "image": "",
+  "sheets": ["1gGjynNm1iUD2Wvp3iNrI8EUWbi6_gxDR_ujPUSnUbrI"],
+  "standout": false,
+  "embedded": false,
+  "production": false
+}

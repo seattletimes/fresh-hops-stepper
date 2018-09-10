@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+
+    <nav class="steps"></nav>
+
+    <main class="app">
+      <video class="centered buffer" playsinline preload="auto"><track kind="metadata" default></track></video>
+      <video class="centered buffer" playsinline preload="auto"><track kind="metadata" default></track></video>
+      
+      
+
+      <section class="intro">
+        <div class="text">
+          <h1>Hop tub <br/>time machine</h1>
+          <div class="credits">By Lauren Frohne, Emily M. Eng and Thomas Wilburn</div>
+          <p class="chatter">
+            Devon Adelman has always risen to the occasion, from competing in soccer and skiing to advocating for disability rights and being a Special Olympics ambassador. Her next big goal: A stand-up paddle board gold medal at the USA Games.
+          <p>
+            <i>Click to play the video, or choose a section from the navigation bar at the top.</i>
+        </div>
+      </section>
+      
+      <section class="outro hidden">
+        <div class="content">
+          <img src="./assets/st-logo.png" alt="The Seattle Times">
+          <button class="restart">Restart presentation</button>
+        </div>
+      </section>
+      
+      <div class="centered spinner">∴</div>
+      
+      
+      <button class="play-pause">
+      <input type="checkbox" checked="true" id="enable-play">
+        <div role="img" alt="pause">
+          <%= t.include("./assets/icons/baseline-pause_circle_outline-24px.svg") %>
+        </div>
+      </button>
+      
+
+      <button type="button" class="prev"></button>
+      <button type="button" class="next"></button>
+        
+      
+      <div class="text-overlays">
+        <div class="content"></div>
+        <div class="closed-captions"></div>
+      </div>
+      
+      <div class="controls">
+        <input type="checkbox" checked="true" id="enable-captions">
+        <label for="enable-captions">
+          <div role="img" alt="toggle closed captions">
+            <%= t.include("./assets/icons/baseline-closed_caption-24px.svg") %>
+          </div>
+        </label>
+      </div>
+
+      
+    </main>
+
+    <script>
+window.videoData = <%= JSON.stringify(json.videos) %>;
+    </script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+.text-overlays {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  max-width: 50%;
+  width: 500px;
+  font-family: @df-sans;
+  font-weight: light;
+  font-size: 24px;
+  animation: fade .6s linear;
+
+  @media @mobile {
+    max-width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 18px;
+  }
+
+  .content {
+    padding: 16px;
+    display: block;
+    background: fade(black, 50%);
+
+    h2 {
+      color: white;
+      margin: 0;
+    }
+  }
+
+  .closed-captions {
+    display: block;
+    padding: 16px;
+    margin-top: 8px;
+    text-align: center;
+    font-style: italic;
+    font-family: monospace;
+    text-transform: uppercase;
+    background: fade(black, 50%);
+  }
+
+  .content, .closed-captions {
+    display: none;
+    animation: fade .2s linear;
+
+    &.show {
+      display: block;
+    }
+  }
+}
