@@ -8,7 +8,7 @@
 
     <nav class="steps"></nav>
 
-    <main class="app">
+    <main class="app paused">
       <video class="centered buffer" playsinline preload="auto"><track kind="metadata" default></track></video>
       <video class="centered buffer" playsinline preload="auto"><track kind="metadata" default></track></video>
       
@@ -35,10 +35,12 @@
       <div class="centered spinner">∴</div>
       
       
-      <button class="play-pause">
-      <input type="checkbox" checked="true" id="enable-play">
-        <div role="img" alt="pause">
+      <button class="play-pause hidden">
+        <div role="img" alt="pause" class="pause-icon">
           <%= t.include("./assets/icons/baseline-pause_circle_outline-24px.svg") %>
+        </div>
+        <div role="img" alt="pause" class="play-icon">
+          <%= t.include("./assets/icons/baseline-play_circle_outline-24px.svg") %>
         </div>
       </button>
       

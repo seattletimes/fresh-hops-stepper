@@ -34,11 +34,21 @@
   cursor: pointer;
   display: block;
 
+  &.hidden {
+    display: none;
+  }
+
   &:hover, &:focus {
     color: @df-blue;
   }
 
+  .pause-icon {
+    display: block;
+  }
 
+  .play-icon {
+    display: none;
+  }
 
   @media @mobile {
     bottom: auto;
@@ -66,7 +76,11 @@
   }
 }
 
-&.paused .play-pause {
+&.paused .play-icon {
+  display: block;
+}
+
+&.paused .pause-icon {
   display: none;
 }
 

@@ -18,8 +18,8 @@ var outro = $.one(".outro");
 var textOverlay = $.one(".text-overlays .content");
 var cueOverlay = $.one(".closed-captions");
 var captionCheck = $.one("#enable-captions");
-
-
+var playPause = $.one(".play-pause");
+var paused = true;
 
 var wish = {
   then: fn => fn(),
@@ -47,10 +47,13 @@ var loadVideo = function(data, element, suppressCaption) {
 };
 
 var playChapter = function(chapter) {
+  paused = false;
+
   intro.classList.add("hidden");
   outro.classList.add("hidden");
   cueOverlay.classList.remove("show");
   app.classList.remove("paused");
+  playPause.classList.remove("hidden");
   current = chapter;
   var data = videos[chapter];
   var [back, front] = buffers;
@@ -114,6 +117,20 @@ var autoAdvance = function() {
   playChapter(current);
 };
 
+var manualAdvance = function(e) {
+  var videoBounds = e.target.getBoundingClientRect();
+  var x = e.clientX - videoBounds.left;
+  var y = e.clientY - videoBounds.top; 
+
+  if (x < videoBounds.width / 2) {
+    current = Math.max(0, current - 1)
+    playChapter(current);
+  } else {
+    autoAdvance();
+  }
+  e.preventDefault();
+}
+
 var loading = function() {
   if (this.classList.contains("front")) {
     app.classList.add("loading");
@@ -121,7 +138,7 @@ var loading = function() {
 };
 
 var loaded = function() {
-  app.classList.remove("loading", "paused");
+  app.classList.remove("loading");
 };
 
 var timeUpdated = function(e) {
@@ -133,20 +150,24 @@ var timeUpdated = function(e) {
 };
 
 var togglePlayback = function() {
-  if (this.paused) {
-    this.play();
+  var [front] = buffers;
+
+  if (paused) {
+    front.play();
     app.classList.remove("paused");
   } else {
-    this.pause();
+    front.pause();
     app.classList.add("paused");
   }
+
+  paused = !paused;
 };
 
 var events = {
   ended: autoAdvance,
   timeupdate: timeUpdated,
-  click: autoAdvance,
-  //click: togglePlayback,
+  click: manualAdvance,
+  // click: togglePlayback,
   // touchstart: togglePlayback,
   loadstart: loading,
   waiting: loading,
@@ -204,6 +225,11 @@ loadVideo(videos[0], buffers[0]);
 // go!
 intro.addEventListener("click", function() {
   playChapter(current);
+});
+
+playPause.addEventListener("click", function(e) {
+  togglePlayback();
+  e.preventDefault();
 });
 
 $.one(".restart").addEventListener("click", function() {
