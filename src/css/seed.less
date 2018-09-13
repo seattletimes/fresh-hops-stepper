@@ -80,3 +80,43 @@ main.app {
   @import "overlays";
   @import "ui";
 }
+
+.firstPage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#myVideo {
+  max-width: none;
+  height: 100%;
+  background: @df-dark-gray;
+  z-index: -1;
+  background: transparent;
+  opacity: 1;
+
+  // short
+  @media (min-aspect-ratio: 16 / 9) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-aspect-ratio: 16 / 9) {
+    height: 100%;
+    width: auto;
+  }
+
+  @media @mobile {
+    min-height: 100vh;
+    min-width: 100vw;
+    height: auto;
+    width: auto;
+  }
+
+  &.front {
+    z-index: 0;
+    opacity: 1;
+  }
+}

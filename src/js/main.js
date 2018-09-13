@@ -10,8 +10,9 @@ var mobileBreak = 400;
 var isSafari = !!navigator.userAgent.match(/i(os|pad|phone)/i);
 var isMac = !!navigator.userAgent.match(/macos/i);
 
+var introPage = $.one(".firstPage");
 var app = $.one(".app");
-var buffers = $(".app video");
+var buffers = $(".app video.buffer");
 var navbar = $.one("nav.steps");
 var intro = $.one(".intro");
 var outro = $.one(".outro");
@@ -202,7 +203,6 @@ captionCheck.addEventListener("change", function() {
 
 
 
-
 // set up the buttons
 navbar.innerHTML = videos.map((d, i) => `
 <button class="play-chapter" aria-label="chapter ${i + 1}" data-chapter="${i}">
@@ -224,6 +224,7 @@ loadVideo(videos[0], buffers[0]);
 
 // go!
 intro.addEventListener("click", function() {
+  introPage.remove();
   playChapter(current);
 });
 
@@ -234,4 +235,8 @@ playPause.addEventListener("click", function(e) {
 
 $.one(".restart").addEventListener("click", function() {
   playChapter(0);
+});
+
+$.one(".backStory").addEventListener("click", function() {
+  window.location.assign("https://www.seattletimes.com/life/food-drink/the-wonder-of-the-fresh-hop-how-washingtons-special-autumn-beer-gets-made/")
 });
