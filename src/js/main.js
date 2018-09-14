@@ -234,7 +234,7 @@ playPause.addEventListener("click", function(e) {
 });
 
 $.one(".restart").addEventListener("click", function() {
-  playChapter(0);
+  window.location.assign("https://projects.seattletimes.com/2018/fresh-hops-brewing")
 });
 
 $.one(".backStory").addEventListener("click", function() {

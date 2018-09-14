@@ -2,102 +2,129 @@
   {
     "video": "01-morning-overview-wide.mp4",
     "mobile": "01-morning-overview-wide_300w.mp4",
-    "text": "The Yakima Valley is known for growing hops.",
-    "type": "block",
-    "notes": "no captions"
+    "text": "The Yakima Valley is known as the hop haven of America.",
+    "type": "block"
   },
   {
     "video": "02-morning-overview-tight.mp4",
     "mobile": "02-morning-overview-tight_300w.mp4",
-    "text": "75% of the United States' hops are grown here.",
+    "text": "The valley produces 75 percent of the hops in the United States and about a third of the world’s hops.",
     "type": "block"
   },
   {
     "video": "03-morning-ground-wide.mp4",
-    "text": "This is Perrault Farms, where fourth-generation hops farmer Jason Perrault is leading the way on new hops varieties and boosting the trend of fresh hop beers. ",
+    "mobile": "03-morning-ground-wide_300w.mp4",
+    "text": "This is Perrault Farms, where fourth-generation hops farmer Jason Perrault breeds some of the most sought-after hops in America. ",
     "type": "block"
   },
   {
     "video": "04-top-cutter-drone.mp4",
-    "text": "It's the first day of harvest and that means brewers are starting to make beers with fresh hops.",
+    "mobile": "04-top-cutter-drone_300w.mp4",
+    "title": "Harvesting",
+    "text": "It's the first day of harvest and that means brewers are starting to make fresh-hop beers using hops harvested from the field that morning.",
     "type": "block"
   },
   {
     "video": "05-hops-in-field.mp4",
-    "text": "Fresh hop beers use hops harvested from the field that morning to create aromatic hop-forward beers you can only get during the harvest season. ",
+    "mobile": "05-hops-in-field_300w.mp4",
+    "text": "That vegetal, resinous scent after the harvest – similar to a freshly mown lawn – is what brewers try to harness into a “fresh beer.” In the past three years, sales of fresh hops have increased about 35 percent at Perrault Farms alone.",
     "type": "block"
   },
   {
     "video": "Jason-Seasonality.mp4",
-    "text": "Jason Perrault\nCEO & Head Breeder, Yakima Chief Hops\n",
+    "mobile": "Jason-Seasonality_300w.mp4",
+    "caption": "Jason-Seasonality.vtt",
+    "text": "Jason Perrault\nCEO & Head Breeder\nYakima Chief Hops",
     "type": "lowerthird"
   },
   {
-    "video": "06-cutter-truck-wide-tight.mp4",
-    "title": "Harvesting",
-    "text": "Hop vines are cut from their trellises and hauled to the harvester by trucks."
-  },
-  {
     "video": "07-harvester-sequence1.mp4",
-    "text": "The vines are placed in the harvester where they are cut and the hop cones are sorted from the stems and leaves. ",
+    "mobile": "07-harvester-sequence1_300w.mp4",
+    "text": "As hop cones are sorted from the stems and leaves in the harvester, Steve Luke of Cloudburst Brewing is starting his 166-mile drive from Seattle to Perrault Farms to pick up fresh hops. ",
     "type": "block"
   },
   {
-    "video": "08-harvester-sequence2.mp4"
-  },
-  {
-    "video": "09-harvester-final.mp4"
-  },
-  {
     "video": "10-kiln.mp4",
-    "text": "Usually the hops would then be sent to the kiln where they are dried to about 10 percent moisture content. ",
+    "mobile": "10-kiln_300w.mp4",
+    "text": "Usually the hops would be sent to the kiln to be dried. Most beers are made with dried hops.",
     "type": "block"
   },
   {
     "video": "11-steve-collects.mp4",
+    "mobile": "11-steve-collects_300w.mp4",
     "title": "Fresh Hops",
-    "text": "But for brewers to pick up fresh, or \"wet,\" hops, they are diverted here where they can fill up bags or boxes to transport back to their brewery immediately.",
+    "text": "But for brewers to pick up fresh, or \"wet,\" hops, they are diverted here where they can fill up bags or boxes to transport back to their breweries immediately.",
     "type": "block"
   },
   {
     "video": "12-steve-collects2.mp4",
-    "text": "This is Steve Luke from Cloudburst Brewing. He's known for making inventive, single-batch beers, especially hop-forward India Pale Ales. Cloudburst is planning to make 8 fresh hop beers this year. ",
+    "mobile": "12-steve-collects2_300w.mp4",
+    "text": "This is Steve Luke from Cloudburst Brewing, one of the rising-star brewers in the Seattle. He makes some of the most inventive IPAs in the city. His fresh-hop beers draw long lines around town. Due to popular demand, Luke will make eight fresh-hop beers this year.",
     "type": "block"
   },
   {
-    "video": "13-load-car.mp4"
+    "video": "Hops-Varieties.mp4",
+    "mobile": "Hops-Varieties_300w.mp4",
+    "caption": "Hops-Varieties.vtt"
   },
   {
-    "video": "14-cloudburst-exterior.mp4"
+    "video": "13-load-car.mp4",
+    "mobile": "13-load-car_300w.mp4",
+    "text": "Many brewers aim to get the hops into the kettle within four hours of harvesting. Steve's colleague at the brewery has already begun the brewing process, awaiting the 360 pounds of fresh organic Simcoe hops. ",
+    "type": "block"
   },
   {
-    "video": "15-steve-unload.mp4"
+    "video": "14-cloudburst-exterior.mp4",
+    "mobile": "14-cloudburst-exterior_300w.mp4",
+    "text": "Cloudburst Brewing\nSeattle",
+    "type": "lowerthird"
   },
   {
-    "video": "Steve-crazy-step.mp4",
-    "title": "The hop tub",
+    "video": "Steve-Hop-Tub.mp4",
+    "mobile": "Steve-Hop-Tub_300w.mp4",
+    "caption": "Steve-Hop-Tub.vtt",
+    "title": "The Hop Tub",
     "text": "Steve Luke\nCloudburst Brewing",
     "type": "lowerthird"
   },
   {
-    "video": "16-steve-hop-bag.mp4"
+    "video": "Steve-crazy-step.mp4",
+    "mobile": "Steve-crazy-step_300w.mp4",
+    "caption": "Steve-crazy-step.vtt"
   },
   {
-    "video": "17-zach-stirs.mp4"
+    "video": "16-steve-hop-bag.mp4",
+    "mobile": "16-steve-hop-bag_300w.mp4"
   },
   {
-    "video": "18-brewery-wide.mp4"
+    "video": "17-zach-stirs.mp4",
+    "mobile": "17-zach-stirs_300w.mp4",
+    "text": "The 360 pounds of fresh Simcoe hops will make 27 kegs of pale ale.",
+    "type": "block"
   },
   {
-    "video": "19-picked-field.mp4"
+    "video": "18-brewery-wide.mp4",
+    "mobile": "18-brewery-wide_300w.mp4",
+    "text": "The new brew will be ready to drink September 19.",
+    "type": "block"
   },
   {
-    "video": "Jason-Joy-ending.mp4"
+    "video": "Jason-Joy-ending.mp4",
+    "mobile": "Jason-Joy-ending_300w.mp4",
+    "caption": "Jason-Joy-ending.vtt",
+    "text": "Jason Perrault\nCEO & Head Breeder\nYakima Chief Hops",
+    "type": "lowerthird"
   },
   {
-    "video": "20-sunset-overview-tight.mp4"
+    "video": "19-picked-field.mp4",
+    "mobile": "19-picked-field_300w.mp4",
+    "text": "The hop harvest in the Yakima Valley continues day and night through the month of September. ",
+    "type": "block"
   },
   {
-    "video": "21-sunset-overview-wide.mp4"
+    "video": "21-sunset-overview-wide.mp4",
+    "mobile": "21-sunset-overview-wide_300w.mp4",
+    "text": "Video: Lauren Frohne, Ramon Dompor, Corrine Chin\nVideo Editing: Lauren Frohne\nGraphics: Emily M. Eng\nDevelopment: Thomas Wilburn, Frank Mina",
+    "type": "block"
   }
 ]
